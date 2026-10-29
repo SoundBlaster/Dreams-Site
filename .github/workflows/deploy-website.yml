@@ -3,6 +3,12 @@ name: Deploy Dreams website
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'website/dreams/**'
+      - '.github/workflows/deploy-website.yml'
 
 permissions:
   contents: read
@@ -71,7 +77,6 @@ jobs:
           set net:max-retries 2
           set net:timeout 30
           lcd "$GITHUB_WORKSPACE/website/dreams"
-          mkdir -p "$FTP_REMOTE_ROOT"
           cd "$FTP_REMOTE_ROOT"
           mirror -R --verbose --exclude-glob .DS_Store . .
           bye
