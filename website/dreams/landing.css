@@ -26,7 +26,6 @@ body.landing { max-width: none; margin: 0; padding: 0; background: #07100b; colo
 .status { border-radius: 40px; color: #e5f7df; border: 1px solid #a5ff8244; background: #0c2216c9; padding: 13px 18px; }
 .hero-action a { padding: 12px 0; border-bottom: 1px solid #b1d9b6; }
 .hero-action a span { color: #a5ff82; margin-left: 12px; }
-.hero-index { position: absolute; right: 6%; bottom: 46px; color: #8ca18c; font-size: 11px; letter-spacing: .15em; }
 .intro, .details { padding: 145px 8%; max-width: 1600px; margin: auto; }
 .intro { display: flex; justify-content: space-between; align-items: end; gap: 30px; }
 .intro > div:first-child, .intro > div:nth-child(2) { max-width: 760px; }
