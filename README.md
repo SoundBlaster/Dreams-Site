@@ -7,7 +7,8 @@ Static website for Dreams for Apple TV. Intended production base:
 
 The landing page presents the tvOS app with footage and screenshots captured
 from Dreams. The App Store release is still in preparation.
-The App Store version is not published. This repository does not deploy on push.
+The App Store version is not published. Changes under `website/dreams/` on
+`main` trigger deployment automatically; a manual trigger is also available.
 Pages and policies are drafts until checked and published; do not set App Store
 URLs to these addresses before their public content has been verified.
 
@@ -15,7 +16,7 @@ URLs to these addresses before their public content has been verified.
 - `website/dreams/support/index.html` — public support contact and basic help.
 - `website/dreams/privacy/index.html` — tvOS app, support email and website policy.
 - `app-store/privacy/` — EN/RU app policy text for Apple TV Privacy Policy.
-- `.github/workflows/deploy-website.yml` — manual FTPS deployment, adapted from `7of10`.
+- `.github/workflows/deploy-website.yml` — FTPS deployment, adapted from `7of10`.
 
 EN/RU content lives in semantic sections. `?lang=en` / `?lang=ru` select the
 language; otherwise the browser language is used. No cookies, browser storage,
@@ -40,7 +41,8 @@ page links. Browser checks and hosting verification remain separate evidence.
 
 The structure follows `~/Development/GitHub/7of10`: static files under a product
 subdirectory and FTPS to existing hosting. No Sites hosting registration or new
-hosting account is used. GitHub Actions deployment is **manual only**, on `main`.
+hosting account is used. GitHub Actions deploys changes on `main` and can also
+be started manually.
 
 Configure an environment named `FTP` in this repository:
 
