@@ -5,7 +5,8 @@ Static website for Dreams for Apple TV. Intended production base:
 
 ## Current state
 
-Content/structure foundation only; final visual design is a separate task.
+The landing page presents the tvOS app with footage and screenshots captured
+from Dreams. The App Store release is still in preparation.
 The App Store version is not published. This repository does not deploy on push.
 Pages and policies are drafts until checked and published; do not set App Store
 URLs to these addresses before their public content has been verified.
