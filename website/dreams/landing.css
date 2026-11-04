@@ -4,7 +4,7 @@ body.landing { max-width: none; margin: 0; padding: 0; background: #07100b; colo
 .landing a { text-decoration: none; }
 .landing .topbar { position: absolute; z-index: 3; top: 0; width: 100%; padding: 28px 6%; border: 0; }
 .landing .brand { font-size: 24px; font-weight: 700; letter-spacing: -.06em; }
-.brand-mark { color: #a0ff87; display: inline-block; font-size: 25px; margin-right: 10px; }
+.brand-mark { display: inline-block; width: 28px; height: 28px; margin-right: 10px; vertical-align: middle; }
 .brand-dot, .footer-brand span { color: #a5ff82; }
 .landing nav { gap: 5px; border: 1px solid #ffffff38; padding: 4px; border-radius: 40px; background: #07100b99; }
 .landing nav a { font: 600 11px/1 sans-serif; padding: 10px 13px; border-radius: 30px; color: #acbbb0; }
@@ -12,6 +12,8 @@ body.landing { max-width: none; margin: 0; padding: 0; background: #07100b; colo
 .landing main { padding: 0; }
 .hero { position: relative; min-height: min(850px, 100svh); min-height: max(670px, 100svh); display: flex; align-items: center; overflow: hidden; background: #020906; }
 .hero-media, .hero-shade { position: absolute; inset: 0; }
+.hero-media { background: center/cover url("assets/rain.jpg"); }
+.hero-play { position: absolute; z-index: 2; right: 6%; bottom: 24px; padding: 9px 14px; color: #e5f7df; background: #0c2216e8; border: 1px solid #a5ff8266; border-radius: 24px; font: inherit; font-size: 12px; cursor: pointer; }
 .hero-media video { width: 100%; height: 100%; object-fit: cover; opacity: .8; }
 .hero-shade { background: linear-gradient(90deg, #06100cf5 0%, #06100cd9 35%, #06100c38 75%), linear-gradient(0deg,#07100b 0%,transparent 22%); }
 .hero-copy { z-index: 1; width: min(900px, 90%); padding: 140px 6% 115px; }
@@ -60,10 +62,10 @@ body.landing { max-width: none; margin: 0; padding: 0; background: #07100b; colo
 .footer-brand small { display: block; font-size: 9px; letter-spacing: .12em; font-weight: 500; margin-top: 10px; color: #78927e; }
 .footer-links { display: flex; flex-wrap: wrap; gap: 24px; }
 @media (max-width: 700px) {
-  .landing .topbar { padding: 22px 6%; }
+  .landing .topbar { padding: calc(22px + env(safe-area-inset-top, 0px)) max(6%, env(safe-area-inset-right, 0px)) 22px max(6%, env(safe-area-inset-left, 0px)); }
   .hero { min-height: 760px; min-height: 100svh; }
   .hero-shade { background: linear-gradient(90deg, #06100ce8, #06100c65), linear-gradient(0deg,#07100b,transparent 35%); }
-  .hero-copy { width: 100%; padding: 130px 6% 110px; }
+  .hero-copy { width: 100%; padding: calc(130px + env(safe-area-inset-top, 0px)) 6% 110px; }
   .landing h1 { font-size: clamp(68px, 13vw, 105px); }
   .intro, .details { padding: 90px 7%; }
   .intro-note { display: none; }
