@@ -1,5 +1,10 @@
 # Dreams-Site
 
+The `website/buildhunter/` directory also contains the BuildHunter landing,
+support and privacy pages for `https://egormerkushev.ru/buildhunter/`. Its
+separate deployment workflow uses the existing `FTP` environment and an
+independent, fixed remote directory; it does not change the Dreams target.
+
 Static website for Dreams for Apple TV. Intended production base:
 `https://egormerkushev.ru/dreams/`.
 
